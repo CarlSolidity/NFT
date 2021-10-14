@@ -28,3 +28,4 @@ artifacts/build-info/473254b3b765d3822df424857b1be8fe.json
 artifacts/contracts/MyNFT.sol/MyNFT.dbg.json
 artifacts/contracts/MyNFT.sol/MyNFT.json
 cache/solidity-files-cache.json
+.env

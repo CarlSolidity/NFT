@@ -6,7 +6,8 @@ describe('MyNFT', function() {
     let addr1;
     let addr2;
     let addrs;
-
+    console.log("ADRESS IS:", process.env.ROPSTEN_RPC_URL)
+    
     beforeEach(async function() {
         this.MyNFT = await ethers.getContractFactory('MyNFT');
         [owner, addr1, addr2, ...addrs] = await ethers.getSigners();
@@ -27,7 +28,10 @@ describe('MyNFT', function() {
 
     describe("Mint", function() {
         it("Should mint a NFT", async function() {
-            
+           await this.mynft.mintNFT(owner.address, 'test');
+
+           count = this.mynft.balanceOf(owner.address);
+           expect(await count).to.equal(1);
         })
     })
 })
